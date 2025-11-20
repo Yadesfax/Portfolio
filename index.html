@@ -140,6 +140,12 @@
             padding-bottom: 10px;
         }
 
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            font-size: 1.4em;
+        }
+
         .about-content {
             font-size: 1.1em;
             line-height: 1.8;
@@ -320,6 +326,35 @@
             color: #666;
         }
 
+        /* Section Veille */
+        #veille {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        #veille h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+        }
+
+        #veille h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            font-size: 1.4em;
+        }
+
+        #veille p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8em;
@@ -344,343 +379,130 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="profile-section">
-                <div class="profile-img">NM</div>
-                <div class="profile-info">
-                    <h1>Noa Monteiro</h1>
-                    <p class="subtitle">Étudiant en BTS SIO - Option SISR</p>
-                    <div class="info-item"><strong>Formation :</strong> CFA ISCIO - Orsay</div>
-                    <div class="info-item"><strong>Entreprise :</strong> FMO Consulting - Consultant SAP</div>
-                    <div class="info-item"><strong>Session :</strong> 2026</div>
-                </div>
+<div class="container">
+    <header>
+        <div class="profile-section">
+            <div class="profile-img">NM</div>
+            <div class="profile-info">
+                <h1>Noa Monteiro</h1>
+                <p class="subtitle">Étudiant en BTS SIO - Option SISR</p>
+                <div class="info-item"><strong>Formation :</strong> CFA ISCIO - Orsay</div>
+                <div class="info-item"><strong>Entreprise :</strong> FMO Consulting - Consultant SAP</div>
+                <div class="info-item"><strong>Session :</strong> 2026</div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <nav>
-            <button onclick="showSection('about')" class="active">À propos</button>
-            <button onclick="showSection('competences')">Compétences</button>
-            <button onclick="showSection('realisations')">Réalisations</button>
-            <button onclick="showSection('contact')">Contact</button>
-        </nav>
+    <nav>
+        <button onclick="showSection('about')" class="active">À propos</button>
+        <button onclick="showSection('competences')">Compétences</button>
+        <button onclick="showSection('realisations')">Réalisations</button>
+        <button onclick="showSection('veille')">Veille IA & SAP</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </nav>
 
-        <section id="about" class="active">
-            <h2>À propos de moi</h2>
-            <div class="about-content">
-                <p>Étudiant en BTS Services Informatiques aux Organisations, spécialité Solutions d'Infrastructure, Systèmes et Réseaux (SISR) au CFA ISCIO d'Orsay, je suis actuellement consultant SAP chez FMO Consulting.</p>
+    <!-- À propos -->
+    <section id="about" class="active">
+        <h2>À propos de moi</h2>
+        <div class="about-content">
+            <p>Étudiant en BTS Services Informatiques aux Organisations, spécialité Solutions d'Infrastructure, Systèmes et Réseaux (SISR) au CFA ISCIO d'Orsay, je suis actuellement consultant SAP chez FMO Consulting.</p>
+        
+            <p>Mon objectif professionnel est de devenir expert en infrastructures IT et en solutions de gestion d'entreprise, en continuant à développer mes compétences techniques et ma capacité à accompagner les organisations dans leur transformation numérique.</p>
             
-                <p>Mon objectif professionnel est de devenir expert en infrastructures IT et en solutions de gestion d'entreprise, en continuant à développer mes compétences techniques et ma capacité à accompagner les organisations dans leur transformation numérique.</p>
-                
-                <p>Ce portfolio présente l'ensemble de mes réalisations professionnelles dans le cadre de ma formation et de mon expérience en entreprise.</p>
-            </div>
-        </section>
+            <p>Ce portfolio présente l'ensemble de mes réalisations professionnelles dans le cadre de ma formation et de mon expérience en entreprise.</p>
+        </div>
+    </section>
 
-        <section id="competences">
-            <h2>Mes Compétences</h2>
-            <div class="competences-grid">
-                <div class="competence-card">
-                    <h3>🖥️ Systèmes & Virtualisation</h3>
-                    <ul>
-                        <li>Windows Server</li>
-                        <li>Linux (Debian, Ubuntu)</li>
-                        <li>Active Directory</li>
-                        <li>Proxmox</li>
-                        <li>Machines virtuelles</li>
-                    </ul>
-                </div>
+    <!-- Compétences -->
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="competences-grid">
+            <!-- ... tes cartes compétences existantes ... -->
+        </div>
+    </section>
 
-                <div class="competence-card">
-                    <h3>🌐 Réseaux & Infrastructure</h3>
-                    <ul>
-                        <li>Configuration réseau</li>
-                        <li>Migration infrastructure</li>
-                        <li>Administration serveurs</li>
-                        <li>Intégration matériel</li>
-                    </ul>
-                </div>
+    <!-- Réalisations -->
+    <section id="realisations">
+        <h2>Mes Réalisations Professionnelles</h2>
+        <!-- ... tes missions existantes ... -->
+    </section>
 
-                <div class="competence-card">
-                    <h3>🔧 Outils & Applications</h3>
-                    <ul>
-                        <li>GLPI (Gestion de parc)</li>
-                        <li>SAP (ERP)</li>
-                        <li>Gestion des sauvegardes</li>
-                        <li>Support utilisateurs</li>
-                    </ul>
-                </div>
+    <!-- Veille IA & SAP -->
+    <section id="veille">
+        <h2>Veille technologique : IA & SAP</h2>
+        <div class="about-content">
+            <p>L’intelligence artificielle transforme profondément les systèmes ERP modernes, notamment les solutions SAP comme <strong>S/4HANA</strong>, en apportant une automatisation accrue, une prise de décision plus intelligente et des agents IA très performants.</p>
 
-                <div class="competence-card">
-                    <h3>📊 Gestion de Projet</h3>
-                    <ul>
-                        <li>Planification</li>
-                        <li>Documentation technique</li>
-                        <li>Tests d'intégration</li>
-                        <li>Déploiement de services</li>
-                    </ul>
-                </div>
+            <h3>1. Automatisation et Machine Learning</h3>
+            <p>Avec le machine learning, SAP automatise des tâches manuelles répétitives. Par exemple, la réconciliation bancaire peut être automatisée jusqu’à <strong>97 %</strong> grâce à l’IA, selon SAP. (<a href="https://news.sap.com/france/2021/02/intelligence-artificielle-pour-accelerer-vos-processus-financiers/?utm_source=chatgpt.com" target="_blank">news.sap.com</a>)</p>
 
-                <div class="competence-card">
-                    <h3>💼 SAP</h3>
-                    <ul>
-                        <li>Migration SAP</li>
-                        <li>Personnalisation (Custo)</li>
-                        <li>Support technique</li>
-                        <li>Optimisation système</li>
-                        <li>Configuration modules</li>
-                    </ul>
-                </div>
+            <h3>2. Prédiction & analytique</h3>
+            <p>Les capacités prédictives de l’IA dans SAP permettent d’anticiper des tendances, des risques ou des opportunités grâce à des analyses temps réel. (<a href="https://www.sap.com/france/products/artificial-intelligence.html?utm_source=chatgpt.com" target="_blank">sap.com</a>)</p>
 
-                <div class="competence-card">
-                    <h3>🌍 Développement Web</h3>
-                    <ul>
-                        <li>HTML/CSS</li>
-                        <li>Création de sites</li>
-                        <li>Présence en ligne</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <h3>3. Agents intelligents (Joule)</h3>
+            <p>SAP a développé un assistant IA nommé <em>Joule</em>, qui comprend le langage naturel et peut aider les utilisateurs dans leurs workflows SAP. (<a href="https://www.lemagit.fr/actualites/366562457/SAP-Business-AI-reda-lintelligence-artificielle-dans-les-applications-SAP?utm_source=chatgpt.com" target="_blank">lemagit.fr</a>)</p>
 
-        <section id="realisations">
-            <h2>Mes Réalisations Professionnelles</h2>
-            
-            <div class="filter-buttons">
-                <button class="filter-btn active" onclick="filterMissions('all')">Toutes</button>
-                <button class="filter-btn" onclick="filterMissions('formation')">Formation</button>
-                <button class="filter-btn" onclick="filterMissions('entreprise1')">1ère année</button>
-                <button class="filter-btn" onclick="filterMissions('entreprise2')">2ème année</button>
-            </div>
+            <h3>4. Stratégie IA de SAP</h3>
+            <p>SAP s’associe à des leaders de l’IA (Mistral, NVIDIA, Google…) pour développer des solutions d’IA d’entreprise fiables, tout en promouvant une IA responsable. (<a href="https://news.sap.com/france/2024/06/sap-integre-la-business-ai-a-lensemble-de-son-portefeuille-enterprise-cloud-et-sassocie-a-des-leaders-de-pointe-en-ia-pour-reveler-tout-le-potentiel-de-ses-clients/?utm_source=chatgpt.com" target="_blank">news.sap.com</a>)</p>
 
-            <div id="missions-container">
-                <!-- Formation -->
-                <div class="mission-card" data-category="formation">
-                    <h3>Mise en place d'une veille informationnelle</h3>
-                    <div class="mission-date">📅 Janvier 2025</div>
-                    <div class="mission-description">
-                        Mise en place d'un système de veille informationnelle pour suivre les évolutions technologiques et les bonnes pratiques dans le domaine des systèmes et réseaux.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Veille technologique</span>
-                        <span class="tag">Développement professionnel</span>
-                    </div>
-                </div>
+            <h3>5. Retour sur investissement</h3>
+            <p>L’IA dans SAP peut générer un ROI très important : certaines études évoquent jusqu’à <strong>353 %</strong>. (<a href="https://www.b-a-w.com/ia-llm-sap-2025/?utm_source=chatgpt.com" target="_blank">b-a-w.com</a>)</p>
 
-                <div class="mission-card" data-category="formation">
-                    <h3>Installation de GLPI via une VM Linux</h3>
-                    <div class="mission-date">📅 Septembre 2025</div>
-                    <div class="mission-description">
-                        Déploiement d'une solution de gestion de parc informatique GLPI sur une machine virtuelle Linux pour gérer l'inventaire et le support technique.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Linux</span>
-                        <span class="tag">Virtualisation</span>
-                        <span class="tag">Gestion de parc</span>
-                        <span class="tag">Support utilisateurs</span>
-                    </div>
-                </div>
+            <p><em>Conclusion</em> : Pour un futur professionnel en SISR, comprendre cette transformation est essentiel. L’IA ne change pas seulement les logiciels, elle modifie les infrastructures, la sécurité, et les compétences nécessaires dans les équipes informatiques.</p>
+        </div>
+    </section>
 
-                <div class="mission-card" data-category="formation">
-                    <h3>Installation d'un serveur Proxmox</h3>
-                    <div class="mission-date">📅 2024-2025</div>
-                    <div class="mission-description">
-                        Installation et configuration d'un serveur de virtualisation Proxmox pour héberger plusieurs machines virtuelles et conteneurs.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Proxmox</span>
-                        <span class="tag">Virtualisation</span>
-                        <span class="tag">Infrastructure</span>
-                    </div>
-                </div>
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="about-content">
+            <p><strong>Nom :</strong> Noa Monteiro</p>
+            <p><strong>Formation :</strong> BTS SIO - Option SISR</p>
+            <p><strong>Centre de formation :</strong> CFA ISCIO - Orsay</p>
+            <p><strong>Entreprise :</strong> FMO Consulting</p>
+            <p><strong>Poste :</strong> Consultant SAP en alternance</p>
+            <p><strong>Session :</strong> 2026</p>
+            <br>
+            <p><em>📧 Email : [À compléter]</em></p>
+            <p><em>🔗 LinkedIn : [À compléter]</em></p>
+            <p><em>💻 GitHub : [À compléter]</em></p>
+            <p><em>📱 Téléphone : [À compléter]</em></p>
+        </div>
+    </section>
 
-                <div class="mission-card" data-category="formation">
-                    <h3>Mise en place d'un Active Directory</h3>
-                    <div class="mission-date">📅 Mai 2025</div>
-                    <div class="mission-description">
-                        Déploiement et configuration d'un Active Directory pour une entreprise fictive, incluant la structure organisationnelle, les stratégies de groupe et la gestion des utilisateurs.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Windows Server</span>
-                        <span class="tag">Active Directory</span>
-                        <span class="tag">Gestion utilisateurs</span>
-                        <span class="tag">Sécurité</span>
-                    </div>
-                </div>
+    <footer>
+        <p>&copy; 2025 Noa Monteiro - Portfolio BTS SIO SISR - Session 2026</p>
+        <p>CFA ISCIO Orsay | FMO Consulting</p>
+    </footer>
+</div>
 
-                <div class="mission-card" data-category="formation">
-                    <h3>Gestion des rôles et des users</h3>
-                    <div class="mission-date">📅 2024-2025</div>
-                    <div class="mission-description">
-                        Administration des comptes utilisateurs et des rôles dans un environnement Active Directory pour une entreprise fictive, incluant les permissions et habilitations.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Administration système</span>
-                        <span class="tag">Gestion des droits</span>
-                        <span class="tag">Sécurité</span>
-                    </div>
-                </div>
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => section.classList.remove('active'));
 
-                <div class="mission-card" data-category="formation">
-                    <h3>Création d'une clé de bootage Windows 10</h3>
-                    <div class="mission-date">📅 Mars 2025</div>
-                    <div class="mission-description">
-                        Création d'une clé USB bootable avec Windows 10 pour les installations et déploiements système, incluant le formatage et l'intégration de l'image système.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Déploiement système</span>
-                        <span class="tag">Windows</span>
-                        <span class="tag">Support technique</span>
-                    </div>
-                </div>
+        const buttons = document.querySelectorAll('nav button');
+        buttons.forEach(button => button.classList.remove('active'));
 
-                <div class="mission-card" data-category="formation">
-                    <h3>Création d'un site internet</h3>
-                    <div class="mission-date">📅 Octobre 2024</div>
-                    <div class="mission-description">
-                        Développement d'un site internet pour une entreprise fictive, incluant la conception, le développement et la mise en ligne.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Développement web</span>
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">Présence en ligne</span>
-                    </div>
-                </div>
+        document.getElementById(sectionId).classList.add('active');
+        event.target.classList.add('active');
+    }
 
-                <!-- Entreprise 1ère année -->
-                <div class="mission-card" data-category="entreprise1">
-                    <h3>Migration et personnalisation SAP</h3>
-                    <div class="mission-date">📅 1ère année en entreprise</div>
-                    <div class="mission-description">
-                        Participation à la migration de systèmes SAP et personnalisation des modules selon les besoins clients. Configuration des paramètres et adaptation de l'ERP.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">SAP</span>
-                        <span class="tag">Migration</span>
-                        <span class="tag">Configuration</span>
-                        <span class="tag">Gestion de projet</span>
-                    </div>
-                </div>
+    function filterMissions(category) {
+        const missions = document.querySelectorAll('.mission-card');
+        const filterButtons = document.querySelectorAll('.filter-btn');
 
-                <div class="mission-card" data-category="entreprise1">
-                    <h3>Support et optimisation SAP et infrastructures</h3>
-                    <div class="mission-date">📅 1ère année en entreprise</div>
-                    <div class="mission-description">
-                        Assurer le support technique des utilisateurs SAP, résolution d'incidents et optimisation des performances du système et de l'infrastructure sous-jacente.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Support technique</span>
-                        <span class="tag">SAP</span>
-                        <span class="tag">Optimisation</span>
-                        <span class="tag">Infrastructure</span>
-                    </div>
-                </div>
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
 
-                <div class="mission-card" data-category="entreprise1">
-                    <h3>Migration réseau et hardware pour la filiale US</h3>
-                    <div class="mission-date">📅 1ère année en entreprise</div>
-                    <div class="mission-description">
-                        Gestion de la migration complète de l'infrastructure réseau et matérielle pour une filiale américaine, incluant la planification, le déploiement et les tests.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Migration infrastructure</span>
-                        <span class="tag">Réseaux</span>
-                        <span class="tag">Hardware</span>
-                        <span class="tag">Gestion de projet</span>
-                    </div>
-                </div>
-
-                <!-- Entreprise 2ème année -->
-                <div class="mission-card" data-category="entreprise2">
-                    <h3>Personnalisation du système SAP (Customizing)</h3>
-                    <div class="mission-date">📅 Septembre - Novembre 2025</div>
-                    <div class="mission-description">
-                        Configuration approfondie des modules SAP, correction d'anomalies système, mise à jour des CRD (Cahiers de Recette Détaillés) et rédaction de documentation technique complète.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">SAP Customizing</span>
-                        <span class="tag">Configuration modules</span>
-                        <span class="tag">Documentation technique</span>
-                        <span class="tag">Correction anomalies</span>
-                    </div>
-                </div>
-
-                <div class="mission-card" data-category="entreprise2">
-                    <h3>Connexion et intégration d'une imprimante 3D</h3>
-                    <div class="mission-date">📅 Novembre 2025</div>
-                    <div class="mission-description">
-                        Intégration d'une imprimante 3D au réseau de l'entreprise, configuration des paramètres réseau, installation des pilotes et formation des utilisateurs.
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Intégration matériel</span>
-                        <span class="tag">Réseaux</span>
-                        <span class="tag">Support utilisateurs</span>
-                        <span class="tag">Configuration</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="about-content">
-                <p><strong>Nom :</strong> Noa Monteiro</p>
-                <p><strong>Formation :</strong> BTS SIO - Option SISR</p>
-                <p><strong>Centre de formation :</strong> CFA ISCIO - Orsay</p>
-                <p><strong>Entreprise :</strong> FMO Consulting</p>
-                <p><strong>Poste :</strong> Consultant SAP en alternance</p>
-                <p><strong>Session :</strong> 2026</p>
-                <br>
-                <p><em>📧 Email : [À compléter]</em></p>
-                <p><em>🔗 LinkedIn : [À compléter]</em></p>
-                <p><em>💻 GitHub : [À compléter]</em></p>
-                <p><em>📱 Téléphone : [À compléter]</em></p>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Noa Monteiro - Portfolio BTS SIO SISR - Session 2026</p>
-            <p>CFA ISCIO Orsay | FMO Consulting</p>
-        </footer>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('nav button');
-            buttons.forEach(button => {
-                button.classList.remove('active');
-            });
-
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active');
-
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-
-        function filterMissions(category) {
-            const missions = document.querySelectorAll('.mission-card');
-            const filterButtons = document.querySelectorAll('.filter-btn');
-
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // Filter missions
-            missions.forEach(mission => {
-                if (category === 'all' || mission.dataset.category === category) {
-                    mission.style.display = 'block';
-                } else {
-                    mission.style.display = 'none';
-                }
-            });
-        }
-    </script>
+        missions.forEach(mission => {
+            if (category === 'all' || mission.dataset.category === category) {
+                mission.style.display = 'block';
+            } else {
+                mission.style.display = 'none';
+            }
+        });
+    }
+</script>
 </body>
 </html>
