@@ -736,4 +736,50 @@
             </div>
         </section>
 
-        <footer
+        <footer>
+            <p>&copy; 2025 Noa Monteiro - Portfolio BTS SIO SISR - Session 2026</p>
+            <p>CFA ISCIO Orsay | FMO Consulting</p>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('nav button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        function filterMissions(category) {
+            const missions = document.querySelectorAll('.mission-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter missions
+            missions.forEach(mission => {
+                if (category === 'all' || mission.dataset.category === category) {
+                    mission.style.display = 'block';
+                } else {
+                    mission.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
