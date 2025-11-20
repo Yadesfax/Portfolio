@@ -5,376 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noa Monteiro - Portfolio BTS SIO SISR</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            line-height: 1.6; color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-
-        .profile-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { background: white; border-radius: 15px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; }
+        .profile-section { display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap; }
         .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: 150px; height: 150px; border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 60px;
-            font-weight: bold;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 60px; font-weight: bold;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-
-        .profile-info {
-            text-align: left;
-        }
-
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.2em;
-            margin-bottom: 15px;
-        }
-
-        .info-item {
-            margin: 5px 0;
-            color: #555;
-        }
-
-        .info-item strong {
-            color: #764ba2;
-        }
-
+        .profile-info { text-align: left; }
+        h1 { color: #667eea; font-size: 2.5em; margin-bottom: 10px; }
+        .subtitle { color: #666; font-size: 1.2em; margin-bottom: 15px; }
+        .info-item { margin: 5px 0; color: #555; }
+        .info-item strong { color: #764ba2; }
         nav {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
+            background: white; border-radius: 15px; padding: 20px; margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;
         }
-
         nav button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: transform 0.3s, box-shadow 0.3s;
+            color: white; border: none; padding: 12px 25px; border-radius: 25px;
+            cursor: pointer; font-size: 1em; transition: transform 0.3s, box-shadow 0.3s;
         }
-
-        nav button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        nav button.active {
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-        }
-
+        nav button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(102,126,234,0.4); }
+        nav button.active { background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); }
         section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: none;
+            background: white; border-radius: 15px; padding: 40px; margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: none;
         }
-
-        section.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 {
-            color: #667eea;
-            font-size: 2em;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #764ba2;
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            color: #764ba2;
-            margin-top: 20px;
-            font-size: 1.4em;
-        }
-
-        .about-content {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
-        }
-
+        section.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+        h2 { color: #667eea; font-size: 2em; margin-bottom: 25px; border-bottom: 3px solid #764ba2; padding-bottom: 10px; }
+        .about-content { font-size: 1.1em; line-height: 1.8; color: #555; }
         .competences-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;
         }
-
         .competence-card {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s;
+            padding: 20px; border-radius: 10px; transition: transform 0.3s;
         }
-
-        .competence-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .competence-card h3 {
-            color: #764ba2;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-
-        .competence-card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .competence-card li {
-            padding: 5px 0;
-            color: #555;
-        }
-
-        .competence-card li:before {
-            content: "✓ ";
-            color: #667eea;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
+        .competence-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .competence-card h3 { color: #764ba2; margin-bottom: 15px; font-size: 1.2em; }
+        .competence-card ul { list-style: none; padding-left: 0; }
+        .competence-card li { padding: 5px 0; color: #555; }
+        .competence-card li:before { content: "✓ "; color: #667eea; font-weight: bold; margin-right: 8px; }
         .mission-card {
-            background: #f9f9f9;
-            border-left: 4px solid #667eea;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            transition: all 0.3s;
+            background: #f9f9f9; border-left: 4px solid #667eea;
+            padding: 25px; margin-bottom: 25px; border-radius: 8px; transition: all 0.3s;
         }
-
-        .mission-card:hover {
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transform: translateX(5px);
-        }
-
-        .mission-card h3 {
-            color: #764ba2;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        .mission-date {
-            color: #667eea;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 0.9em;
-        }
-
-        .mission-description {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .mission-documents {
-            background: #f0f4ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-
-        .mission-documents h4 {
-            color: #667eea;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-
-        .document-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .document-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .document-list li:last-child {
-            border-bottom: none;
-        }
-
-        .document-link {
-            color: #764ba2;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: color 0.3s;
-        }
-
-        .document-link:hover {
-            color: #667eea;
-            text-decoration: underline;
-        }
-
-        .doc-icon {
-            font-size: 1.2em;
-        }
-
-        .placeholder-text {
-            color: #999;
-            font-style: italic;
-            font-size: 0.9em;
-        }
-
-        .competences-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-
-        .tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
-        }
-
-        .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-            justify-content: center;
-        }
-
+        .mission-card:hover { background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transform: translateX(5px); }
+        .mission-card h3 { color: #764ba2; margin-bottom: 10px; font-size: 1.3em; }
+        .mission-date { color: #667eea; font-weight: bold; margin-bottom: 10px; font-size: 0.9em; }
+        .mission-description { color: #555; margin-bottom: 15px; line-height: 1.6; }
+        .competences-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; }
+        .filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center; }
         .filter-btn {
-            background: #f0f0f0;
-            border: 2px solid #ddd;
-            padding: 8px 20px;
-            border-radius: 20px;
-            cursor: pointer;
+            background: #f0f0f0; border: 2px solid #ddd; padding: 8px 20px; border-radius: 20px; cursor: pointer;
             transition: all 0.3s;
         }
-
-        .filter-btn:hover, .filter-btn.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: #667eea;
-        }
-
-        footer {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            color: #666;
-        }
-
-        /* Section Veille */
-        #veille {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        #veille h2 {
-            color: #667eea;
-            font-size: 2em;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #764ba2;
-            padding-bottom: 10px;
-        }
-
-        #veille h3 {
-            color: #764ba2;
-            margin-top: 20px;
-            font-size: 1.4em;
-        }
-
-        #veille p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
+        .filter-btn:hover, .filter-btn.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-color: #667eea; }
+        footer { background: white; border-radius: 15px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); color: #666; }
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .profile-section {
-                flex-direction: column;
-            }
-
-            .profile-info {
-                text-align: center;
-            }
-
-            nav {
-                flex-direction: column;
-            }
-
-            nav button {
-                width: 100%;
-            }
+            h1 { font-size: 1.8em; }
+            .profile-section { flex-direction: column; }
+            .profile-info { text-align: center; }
+            nav { flex-direction: column; }
+            nav button { width: 100%; }
         }
     </style>
 </head>
@@ -397,7 +104,6 @@
         <button onclick="showSection('about')" class="active">À propos</button>
         <button onclick="showSection('competences')">Compétences</button>
         <button onclick="showSection('realisations')">Réalisations</button>
-        <button onclick="showSection('veille')">Veille IA & SAP</button>
         <button onclick="showSection('contact')">Contact</button>
     </nav>
 
@@ -424,31 +130,35 @@
     <!-- Réalisations -->
     <section id="realisations">
         <h2>Mes Réalisations Professionnelles</h2>
-        <!-- ... tes missions existantes ... -->
-    </section>
-
-    <!-- Veille IA & SAP -->
-    <section id="veille">
-        <h2>Veille technologique : IA & SAP</h2>
-        <div class="about-content">
-            <p>L’intelligence artificielle transforme profondément les systèmes ERP modernes, notamment les solutions SAP comme <strong>S/4HANA</strong>, en apportant une automatisation accrue, une prise de décision plus intelligente et des agents IA très performants.</p>
-
-            <h3>1. Automatisation et Machine Learning</h3>
-            <p>Avec le machine learning, SAP automatise des tâches manuelles répétitives. Par exemple, la réconciliation bancaire peut être automatisée jusqu’à <strong>97 %</strong> grâce à l’IA, selon SAP. (<a href="https://news.sap.com/france/2021/02/intelligence-artificielle-pour-accelerer-vos-processus-financiers/?utm_source=chatgpt.com" target="_blank">news.sap.com</a>)</p>
-
-            <h3>2. Prédiction & analytique</h3>
-            <p>Les capacités prédictives de l’IA dans SAP permettent d’anticiper des tendances, des risques ou des opportunités grâce à des analyses temps réel. (<a href="https://www.sap.com/france/products/artificial-intelligence.html?utm_source=chatgpt.com" target="_blank">sap.com</a>)</p>
-
-            <h3>3. Agents intelligents (Joule)</h3>
-            <p>SAP a développé un assistant IA nommé <em>Joule</em>, qui comprend le langage naturel et peut aider les utilisateurs dans leurs workflows SAP. (<a href="https://www.lemagit.fr/actualites/366562457/SAP-Business-AI-reda-lintelligence-artificielle-dans-les-applications-SAP?utm_source=chatgpt.com" target="_blank">lemagit.fr</a>)</p>
-
-            <h3>4. Stratégie IA de SAP</h3>
-            <p>SAP s’associe à des leaders de l’IA (Mistral, NVIDIA, Google…) pour développer des solutions d’IA d’entreprise fiables, tout en promouvant une IA responsable. (<a href="https://news.sap.com/france/2024/06/sap-integre-la-business-ai-a-lensemble-de-son-portefeuille-enterprise-cloud-et-sassocie-a-des-leaders-de-pointe-en-ia-pour-reveler-tout-le-potentiel-de-ses-clients/?utm_source=chatgpt.com" target="_blank">news.sap.com</a>)</p>
-
-            <h3>5. Retour sur investissement</h3>
-            <p>L’IA dans SAP peut générer un ROI très important : certaines études évoquent jusqu’à <strong>353 %</strong>. (<a href="https://www.b-a-w.com/ia-llm-sap-2025/?utm_source=chatgpt.com" target="_blank">b-a-w.com</a>)</p>
-
-            <p><em>Conclusion</em> : Pour un futur professionnel en SISR, comprendre cette transformation est essentiel. L’IA ne change pas seulement les logiciels, elle modifie les infrastructures, la sécurité, et les compétences nécessaires dans les équipes informatiques.</p>
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterMissions('all')">Toutes</button>
+            <button class="filter-btn" onclick="filterMissions('formation')">Formation</button>
+            <button class="filter-btn" onclick="filterMissions('entreprise1')">1ère année</button>
+            <button class="filter-btn" onclick="filterMissions('entreprise2')">2ème année</button>
+        </div>
+        <div id="missions-container">
+            <!-- Tes missions formation et entreprise déjà existantes -->
+            <!-- Veille IA & SAP -->
+            <div class="mission-card" data-category="formation">
+                <h3>Veille technologique : Impact de l’IA sur SAP</h3>
+                <div class="mission-date">📅 Avril 2025</div>
+                <div class="mission-description">
+                    <p><strong>Pourquoi cette veille :</strong> En tant qu'étudiant SISR et consultant SAP, il est essentiel de comprendre comment l’IA transforme les systèmes ERP pour anticiper les besoins futurs des entreprises et adapter les infrastructures IT.</p>
+                    
+                    <p><strong>Analyse et synthèse :</strong> 
+                    L’intelligence artificielle permet d’automatiser les tâches répétitives dans SAP (ex : réconciliation bancaire jusqu’à 97% automatisée), d’améliorer la prise de décision grâce à l’analytique prédictive, et d’assister les utilisateurs via des agents intelligents comme SAP Joule. SAP s’associe à NVIDIA, Google et d’autres leaders IA pour développer des solutions robustes et responsables. Ces changements impactent directement les infrastructures SISR, la sécurité et la gestion des projets IT.</p>
+                    
+                    <p><strong>Conclusion :</strong> Cette veille permet de mieux comprendre l’évolution des ERP et l’importance d’intégrer les nouvelles technologies dans les environnements professionnels. Pour le BTS SIO SISR, cela renforce la capacité à conseiller, déployer et sécuriser des systèmes intégrant l’IA.</p>
+                </div>
+                <div class="competences-tags">
+                    <span class="tag">Veille technologique</span>
+                    <span class="tag">SAP</span>
+                    <span class="tag">Intelligence artificielle</span>
+                    <span class="tag">Analyse & synthèse</span>
+                    <span class="tag">SISR</span>
+                </div>
+            </div>
+            <!-- Les autres missions formation et entreprise à conserver ici -->
         </div>
     </section>
 
@@ -480,10 +190,8 @@
     function showSection(sectionId) {
         const sections = document.querySelectorAll('section');
         sections.forEach(section => section.classList.remove('active'));
-
         const buttons = document.querySelectorAll('nav button');
         buttons.forEach(button => button.classList.remove('active'));
-
         document.getElementById(sectionId).classList.add('active');
         event.target.classList.add('active');
     }
@@ -491,16 +199,12 @@
     function filterMissions(category) {
         const missions = document.querySelectorAll('.mission-card');
         const filterButtons = document.querySelectorAll('.filter-btn');
-
         filterButtons.forEach(btn => btn.classList.remove('active'));
         event.target.classList.add('active');
-
         missions.forEach(mission => {
             if (category === 'all' || mission.dataset.category === category) {
                 mission.style.display = 'block';
-            } else {
-                mission.style.display = 'none';
-            }
+            } else { mission.style.display = 'none'; }
         });
     }
 </script>
