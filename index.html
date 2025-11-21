@@ -195,6 +195,7 @@
             margin-bottom: 25px;
             border-radius: 8px;
             transition: all 0.3s;
+            cursor: pointer;
         }
 
         .mission-card:hover {
@@ -222,55 +223,21 @@
             line-height: 1.6;
         }
 
-        .mission-documents {
-            background: #f0f4ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-
-        .mission-documents h4 {
-            color: #667eea;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-
-        .document-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .document-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .document-list li:last-child {
-            border-bottom: none;
-        }
-
-        .document-link {
-            color: #764ba2;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: color 0.3s;
-        }
-
-        .document-link:hover {
-            color: #667eea;
-            text-decoration: underline;
-        }
-
-        .doc-icon {
-            font-size: 1.2em;
-        }
-
-        .placeholder-text {
-            color: #999;
-            font-style: italic;
+        .view-details-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
             font-size: 0.9em;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .view-details-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
         .competences-tags {
@@ -311,16 +278,163 @@
             border-color: #667eea;
         }
 
-        .edit-note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            animation: fadeIn 0.3s;
         }
 
-        .edit-note strong {
-            color: #856404;
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            animation: slideDown 0.3s;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .modal-header h2 {
+            color: white;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 30px;
+        }
+
+        .close:hover {
+            color: #f0f0f0;
+        }
+
+        .detail-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .detail-section h3 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .detail-section ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .detail-section ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .detail-section p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .editable-content {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #ddd;
+            min-height: 100px;
+            color: #999;
+            font-style: italic;
+        }
+
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .document-list li {
+            padding: 10px;
+            margin-bottom: 8px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .document-link {
+            color: #764ba2;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+
+        .document-link:hover {
+            color: #667eea;
+        }
+
+        .doc-icon {
+            font-size: 1.3em;
+        }
+
+        .veille-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .source-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .source-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         footer {
@@ -352,6 +466,11 @@
             nav button {
                 width: 100%;
             }
+
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+            }
         }
     </style>
 </head>
@@ -374,26 +493,20 @@
             <button onclick="showSection('about')" class="active">À propos</button>
             <button onclick="showSection('competences')">Compétences</button>
             <button onclick="showSection('realisations')">Réalisations</button>
+            <button onclick="showSection('veille')">Veille Informationnelle</button>
             <button onclick="showSection('contact')">Contact</button>
         </nav>
 
         <section id="about" class="active">
             <h2>À propos de moi</h2>
             <div class="about-content">
-                <p>Bonjour, je m'appelle Noa Monteiro et je suis actuellement étudiant en BTS Services Informatiques aux Organisations (SIO), spécialité Solutions d’Infrastructure, Systèmes et Réseaux (SISR) au CFA ISCIO d’Orsay.</p>
-
-<p> À travers ce portfolio, je vous présente l’ensemble de mes réalisations, qu’elles soient académiques dans le cadre de ma formation ou professionnelles grâce à mon expérience en alternance. Vous y trouverez également un aperçu de mes compétences techniques, de mon parcours, ainsi que de mon engagement dans le domaine informatique.</p>
-
-<p>Ce portfolio reflète mon évolution, mes apprentissages et ma motivation à progresser dans le secteur des systèmes et réseaux.</p>
-<p>Vous pourrez y découvrir :</p>
-
-<p>-mes projets menés en formation et en entreprise,</p>
-
-<p>-mes missions en tant qu’alternant dans le monde professionnel,</p>
-
-<p>-mes compétences en administration système, virtualisation, sécurité et réseau,</p>
-
-<p>-ainsi que ma démarche de veille technologique, essentielle dans un domaine en constante évolution.</p>
+                <p>Étudiant en BTS Services Informatiques aux Organisations, spécialité Solutions d'Infrastructure, Systèmes et Réseaux (SISR) au CFA ISCIO d'Orsay, je suis actuellement consultant SAP chez FMO Consulting.</p>
+                
+                <p>Passionné par les systèmes et réseaux informatiques, j'ai développé des compétences solides dans l'administration système, la virtualisation, la gestion d'infrastructures et les solutions SAP. Mon parcours en alternance me permet de combiner apprentissage théorique et expérience pratique en entreprise.</p>
+                
+                <p>Mon objectif professionnel est de devenir expert en infrastructures IT et en solutions de gestion d'entreprise, en continuant à développer mes compétences techniques et ma capacité à accompagner les organisations dans leur transformation numérique.</p>
+                
+                <p>Ce portfolio présente l'ensemble de mes réalisations professionnelles dans le cadre de ma formation et de mon expérience en entreprise.</p>
             </div>
         </section>
 
@@ -466,10 +579,6 @@
         <section id="realisations">
             <h2>Mes Réalisations Professionnelles</h2>
             
-            <div class="edit-note">
-                <strong>💡 Note :</strong> Les documents et productions de chaque mission seront ajoutés ultérieurement. Pour ajouter vos documents, remplacez le texte "⚠️ Documents à ajouter ultérieurement" par vos liens de documents.
-            </div>
-
             <div class="filter-buttons">
                 <button class="filter-btn active" onclick="filterMissions('all')">Toutes</button>
                 <button class="filter-btn" onclick="filterMissions('formation')">Formation</button>
@@ -479,315 +588,286 @@
 
             <div id="missions-container">
                 <!-- Formation -->
-                <div class="mission-card" data-category="formation">
-                    <h3>Mise en place d'une veille informationnelle : SAP et Intelligence Artificielle</h3>
-                    <div class="mission-date">📅 Janvier 2025 - En cours</div>
-                    <div class="mission-description">
-                        <strong>Contexte :</strong> Dans le cadre de mon alternance chez FMO Consulting en tant que consultant SAP, j'ai mis en place une veille informationnelle structurée pour suivre les évolutions technologiques dans deux domaines stratégiques : SAP et l'Intelligence Artificielle appliquée aux systèmes d'information.
-                        
-                        <br><br><strong>Objectifs de la veille :</strong>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>📌 Suivre les mises à jour et nouvelles fonctionnalités de SAP (S/4HANA, SAP BTP, SAP Fiori)</li>
-                            <li>📌 Identifier les intégrations de l'IA dans les solutions SAP (SAP AI Core, Machine Learning)</li>
-                            <li>📌 Surveiller les tendances en cybersécurité pour les infrastructures SAP</li>
-                            <li>📌 Découvrir les innovations en IA générative et leur application dans l'administration système</li>
-                            <li>📌 Anticiper les évolutions métier pour améliorer mes compétences professionnelles</li>
-                        </ul>
-
-                        <br><strong>Sources et outils utilisés :</strong>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>🔹 <strong>SAP Community</strong> : Forums, blogs et discussions techniques SAP</li>
-                            <li>🔹 <strong>SAP News Center</strong> : Annonces officielles et releases notes</li>
-                            <li>🔹 <strong>LinkedIn</strong> : Suivi d'experts SAP et professionnels de l'IA</li>
-                            <li>🔹 <strong>Feedly</strong> : Agrégateur RSS pour centraliser les sources tech</li>
-                            <li>🔹 <strong>Google Alerts</strong> : Notifications automatiques sur "SAP AI", "SAP S/4HANA", "IA infrastructure"</li>
-                            <li>🔹 <strong>YouTube</strong> : Chaînes SAP, conférences (SAP TechEd, SAP NOW)</li>
-                            <li>🔹 <strong>Reddit</strong> : r/SAP, r/ArtificialIntelligence, r/sysadmin</li>
-                            <li>🔹 <strong>Newsletters</strong> : IT Social, SAP Insider, AI Weekly</li>
-                        </ul>
-
-                        <br><strong>Thématiques surveillées :</strong>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>🎯 <strong>SAP S/4HANA et migration Cloud</strong> : Stratégies de migration, bonnes pratiques, retours d'expérience</li>
-                            <li>🎯 <strong>SAP BTP (Business Technology Platform)</strong> : Nouvelles fonctionnalités, intégrations, développement low-code</li>
-                            <li>🎯 <strong>IA dans SAP</strong> : SAP AI Core, SAP Analytics Cloud avec ML, automatisation des processus</li>
-                            <li>🎯 <strong>IA générative</strong> : ChatGPT, Copilot pour l'administration système, automatisation de scripts</li>
-                            <li>🎯 <strong>Sécurité SAP</strong> : Vulnérabilités, patchs de sécurité, conformité RGPD</li>
-                            <li>🎯 <strong>DevOps & Infrastructure</strong> : Containers, Kubernetes, CI/CD pour SAP</li>
-                        </ul>
-
-                        <br><strong>Méthodologie de veille :</strong>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>✅ Consultation quotidienne des flux RSS et Google Alerts</li>
-                            <li>✅ Revue hebdomadaire des articles sauvegardés et synthèse des informations clés</li>
-                            <li>✅ Classement par thématiques dans un tableau de bord (Notion/Trello)</li>
-                            <li>✅ Rédaction de fiches de synthèse sur les sujets majeurs</li>
-                            <li>✅ Partage des découvertes avec l'équipe FMO Consulting</li>
-                            <li>✅ Mise en pratique des nouvelles connaissances dans mes missions</li>
-                        </ul>
-
-                        <br><strong>Exemples de découvertes récentes :</strong>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>🔸 <strong>Joule</strong> : L'assistant IA générative de SAP intégré dans S/4HANA Cloud pour automatiser les tâches métier</li>
-                            <li>🔸 <strong>SAP Datasphere</strong> : Nouvelle solution de gestion unifiée des données avec capacités IA/ML</li>
-                            <li>🔸 <strong>RISE with SAP</strong> : Offre de migration tout-en-un vers le Cloud avec accompagnement</li>
-                            <li>🔸 <strong>GitHub Copilot</strong> : Utilisation de l'IA pour générer des scripts ABAP et automatiser les configurations</li>
-                            <li>🔸 <strong>Sécurité SAP</strong> : Nouvelles CVE et recommandations de patching pour S/4HANA</li>
-                        </ul>
-
-                        <br><strong>Apports professionnels :</strong>
-                        Cette veille me permet de rester à jour sur les technologies que j'utilise quotidiennement chez FMO Consulting, d'anticiper les évolutions du marché SAP, et de proposer des solutions innovantes intégrant l'IA pour optimiser les infrastructures et les processus métier. Elle contribue également à mon développement professionnel en renforçant mon expertise technique et ma capacité à conseiller les clients sur les meilleures pratiques.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>🔗 Sources utilisées pour la veille :</h4>
-                        <ul class="document-list">
-                            <li><a href="https://community.sap.com/" class="document-link" target="_blank"><span class="doc-icon">🌐</span> SAP Community - Forums et blogs techniques</a></li>
-                            <li><a href="https://news.sap.com/" class="document-link" target="_blank"><span class="doc-icon">📰</span> SAP News Center - Actualités officielles SAP</a></li>
-                            <li><a href="https://www.sap.com/products/artificial-intelligence.html" class="document-link" target="_blank"><span class="doc-icon">🤖</span> SAP AI - Solutions d'Intelligence Artificielle SAP</a></li>
-                            <li><a href="https://www.sap.com/products/technology-platform.html" class="document-link" target="_blank"><span class="doc-icon">☁️</span> SAP Business Technology Platform (BTP)</a></li>
-                            <li><a href="https://www.linkedin.com/company/sap/" class="document-link" target="_blank"><span class="doc-icon">💼</span> LinkedIn SAP - Actualités et réseau professionnel</a></li>
-                            <li><a href="https://feedly.com/" class="document-link" target="_blank"><span class="doc-icon">📡</span> Feedly - Agrégateur de flux RSS</a></li>
-                            <li><a href="https://www.google.com/alerts" class="document-link" target="_blank"><span class="doc-icon">🔔</span> Google Alerts - Notifications automatiques</a></li>
-                            <li><a href="https://www.youtube.com/@SAP" class="document-link" target="_blank"><span class="doc-icon">🎥</span> YouTube SAP - Conférences et tutoriels</a></li>
-                            <li><a href="https://www.reddit.com/r/SAP/" class="document-link" target="_blank"><span class="doc-icon">💬</span> Reddit r/SAP - Communauté et discussions</a></li>
-                            <li><a href="https://www.reddit.com/r/artificial/" class="document-link" target="_blank"><span class="doc-icon">🧠</span> Reddit r/ArtificialIntelligence - Actualités IA</a></li>
-                            <li><a href="https://sapinsider.org/" class="document-link" target="_blank"><span class="doc-icon">📖</span> SAP Insider - Magazine et ressources SAP</a></li>
-                            <li><a href="https://blogs.sap.com/" class="document-link" target="_blank"><span class="doc-icon">✍️</span> SAP Blogs - Articles techniques et retours d'expérience</a></li>
-                            <li><a href="https://help.sap.com/" class="document-link" target="_blank"><span class="doc-icon">📚</span> SAP Help Portal - Documentation officielle</a></li>
-                            <li><a href="https://openai.com/blog" class="document-link" target="_blank"><span class="doc-icon">🔬</span> OpenAI Blog - Innovations en IA générative</a></li>
-                            <li><a href="https://github.com/topics/sap" class="document-link" target="_blank"><span class="doc-icon">💻</span> GitHub SAP - Projets open source et scripts</a></li>
-                        </ul>
-                    </div>
-                    <div class="competences-tags">
-                        <span class="tag">Veille technologique</span>
-                        <span class="tag">SAP</span>
-                        <span class="tag">Intelligence Artificielle</span>
-                        <span class="tag">Développement professionnel</span>
-                        <span class="tag">Analyse et synthèse</span>
-                        <span class="tag">Anticipation des évolutions</span>
-                    </div>
-                </div>
-
-                <div class="mission-card" data-category="formation">
+                <div class="mission-card" data-category="formation" onclick="openModal('glpi')">
                     <h3>Installation de GLPI via une VM Linux</h3>
                     <div class="mission-date">📅 Septembre 2025</div>
                     <div class="mission-description">
                         Déploiement d'une solution de gestion de parc informatique GLPI sur une machine virtuelle Linux pour gérer l'inventaire et le support technique.
                     </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                            <!-- EXEMPLE :
-                            <li><a href="#" class="document-link"><span class="doc-icon">📄</span> Documentation d'installation GLPI</a></li>
-                            <li><a href="#" class="document-link"><span class="doc-icon">📊</span> Captures d'écran interface GLPI</a></li>
-                            <li><a href="#" class="document-link"><span class="doc-icon">🔧</span> Script de déploiement</a></li>
-                            -->
-                        </ul>
-                    </div>
                     <div class="competences-tags">
                         <span class="tag">Linux</span>
                         <span class="tag">Virtualisation</span>
                         <span class="tag">Gestion de parc</span>
-                        <span class="tag">Support utilisateurs</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('glpi')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="formation">
+                <div class="mission-card" data-category="formation" onclick="openModal('proxmox')">
                     <h3>Installation d'un serveur Proxmox</h3>
                     <div class="mission-date">📅 2024-2025</div>
                     <div class="mission-description">
                         Installation et configuration d'un serveur de virtualisation Proxmox pour héberger plusieurs machines virtuelles et conteneurs.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
                     </div>
                     <div class="competences-tags">
                         <span class="tag">Proxmox</span>
                         <span class="tag">Virtualisation</span>
                         <span class="tag">Infrastructure</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('proxmox')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="formation">
+                <div class="mission-card" data-category="formation" onclick="openModal('ad')">
                     <h3>Mise en place d'un Active Directory</h3>
                     <div class="mission-date">📅 Mai 2025</div>
                     <div class="mission-description">
                         Déploiement et configuration d'un Active Directory pour une entreprise fictive, incluant la structure organisationnelle, les stratégies de groupe et la gestion des utilisateurs.
                     </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
-                    </div>
                     <div class="competences-tags">
                         <span class="tag">Windows Server</span>
                         <span class="tag">Active Directory</span>
-                        <span class="tag">Gestion utilisateurs</span>
                         <span class="tag">Sécurité</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('ad')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="formation">
-                    <h3>Gestion des rôles et des users</h3>
+                <div class="mission-card" data-category="formation" onclick="openModal('roles')">
+                    <h3>Gestion des rôles et des utilisateurs</h3>
                     <div class="mission-date">📅 2024-2025</div>
                     <div class="mission-description">
-                        Administration des comptes utilisateurs et des rôles dans un environnement Active Directory pour une entreprise fictive, incluant les permissions et habilitations.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Administration des comptes utilisateurs et des rôles dans un environnement Active Directory pour une entreprise fictive.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">Administration système</span>
                         <span class="tag">Gestion des droits</span>
-                        <span class="tag">Sécurité</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('roles')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="formation">
+                <div class="mission-card" data-category="formation" onclick="openModal('usb')">
                     <h3>Création d'une clé de bootage Windows 10</h3>
                     <div class="mission-date">📅 Mars 2025</div>
                     <div class="mission-description">
-                        Création d'une clé USB bootable avec Windows 10 pour les installations et déploiements système, incluant le formatage et l'intégration de l'image système.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Création d'une clé USB bootable avec Windows 10 pour les installations et déploiements système.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">Déploiement système</span>
                         <span class="tag">Windows</span>
-                        <span class="tag">Support technique</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('usb')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="formation">
+                <div class="mission-card" data-category="formation" onclick="openModal('site')">
                     <h3>Création d'un site internet</h3>
                     <div class="mission-date">📅 Octobre 2024</div>
                     <div class="mission-description">
-                        Développement d'un site internet pour une entreprise fictive, incluant la conception, le développement et la mise en ligne.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Développement d'un site internet pour une entreprise fictive, incluant la conception et le développement.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">Développement web</span>
                         <span class="tag">HTML/CSS</span>
-                        <span class="tag">Présence en ligne</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('site')">Voir les détails</button>
                 </div>
 
                 <!-- Entreprise 1ère année -->
-                <div class="mission-card" data-category="entreprise1">
+                <div class="mission-card" data-category="entreprise1" onclick="openModal('sap-migration')">
                     <h3>Migration et personnalisation SAP</h3>
                     <div class="mission-date">📅 1ère année en entreprise</div>
                     <div class="mission-description">
-                        Participation à la migration de systèmes SAP et personnalisation des modules selon les besoins clients. Configuration des paramètres et adaptation de l'ERP.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Participation à la migration de systèmes SAP et personnalisation des modules selon les besoins clients.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">SAP</span>
                         <span class="tag">Migration</span>
-                        <span class="tag">Configuration</span>
-                        <span class="tag">Gestion de projet</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('sap-migration')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="entreprise1">
-                    <h3>Support et optimisation SAP et infrastructures</h3>
+                <div class="mission-card" data-category="entreprise1" onclick="openModal('support-sap')">
+                    <h3>Support et optimisation SAP</h3>
                     <div class="mission-date">📅 1ère année en entreprise</div>
                     <div class="mission-description">
-                        Assurer le support technique des utilisateurs SAP, résolution d'incidents et optimisation des performances du système et de l'infrastructure sous-jacente.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Support technique des utilisateurs SAP et optimisation des performances du système.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">Support technique</span>
                         <span class="tag">SAP</span>
-                        <span class="tag">Optimisation</span>
-                        <span class="tag">Infrastructure</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('support-sap')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="entreprise1">
-                    <h3>Migration réseau et hardware pour la filiale US</h3>
+                <div class="mission-card" data-category="entreprise1" onclick="openModal('migration-us')">
+                    <h3>Migration réseau et hardware filiale US</h3>
                     <div class="mission-date">📅 1ère année en entreprise</div>
                     <div class="mission-description">
-                        Gestion de la migration complète de l'infrastructure réseau et matérielle pour une filiale américaine, incluant la planification, le déploiement et les tests.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Gestion de la migration complète de l'infrastructure réseau et matérielle pour une filiale américaine.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">Migration infrastructure</span>
                         <span class="tag">Réseaux</span>
-                        <span class="tag">Hardware</span>
-                        <span class="tag">Gestion de projet</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('migration-us')">Voir les détails</button>
                 </div>
 
                 <!-- Entreprise 2ème année -->
-                <div class="mission-card" data-category="entreprise2">
+                <div class="mission-card" data-category="entreprise2" onclick="openModal('custo-sap')">
                     <h3>Personnalisation du système SAP (Customizing)</h3>
                     <div class="mission-date">📅 Septembre - Novembre 2025</div>
                     <div class="mission-description">
-                        Configuration approfondie des modules SAP, correction d'anomalies système, mise à jour des CRD (Cahiers de Recette Détaillés) et rédaction de documentation technique complète.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Configuration approfondie des modules SAP, correction d'anomalies et documentation technique.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">SAP Customizing</span>
-                        <span class="tag">Configuration modules</span>
-                        <span class="tag">Documentation technique</span>
-                        <span class="tag">Correction anomalies</span>
+                        <span class="tag">Configuration</span>
                     </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('custo-sap')">Voir les détails</button>
                 </div>
 
-                <div class="mission-card" data-category="entreprise2">
-                    <h3>Connexion et intégration d'une imprimante 3D</h3>
+                <div class="mission-card" data-category="entreprise2" onclick="openModal('imprimante')">
+                    <h3>Connexion et intégration imprimante 3D</h3>
                     <div class="mission-date">📅 Novembre 2025</div>
                     <div class="mission-description">
-                        Intégration d'une imprimante 3D au réseau de l'entreprise, configuration des paramètres réseau, installation des pilotes et formation des utilisateurs.
-                    </div>
-                    <div class="mission-documents">
-                        <h4>📎 Documents et productions associés :</h4>
-                        <ul class="document-list">
-                            <li class="placeholder-text">⚠️ Documents à ajouter ultérieurement</li>
-                        </ul>
+                        Intégration d'une imprimante 3D au réseau de l'entreprise avec configuration et formation utilisateurs.
                     </div>
                     <div class="competences-tags">
                         <span class="tag">Intégration matériel</span>
                         <span class="tag">Réseaux</span>
-                        <span class="tag">Support utilisateurs</span>
-                        <span class="tag">Configuration</span>
+                    </div>
+                    <button class="view-details-btn" onclick="event.stopPropagation(); openModal('imprimante')">Voir les détails</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="veille">
+            <h2>Veille Informationnelle</h2>
+            
+            <div class="veille-section">
+                <h3 style="color: #764ba2; margin-bottom: 20px; font-size: 1.5em;">SAP et Intelligence Artificielle</h3>
+                
+                <div style="background: white; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">
+                        <strong>Contexte :</strong> Dans le cadre de mon alternance chez FMO Consulting en tant que consultant SAP, j'ai mis en place une veille informationnelle structurée pour suivre les évolutions technologiques dans deux domaines stratégiques : SAP et l'Intelligence Artificielle appliquée aux systèmes d'information.
+                    </p>
+
+                    <h4 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.2em;">🎯 Objectifs de la veille</h4>
+                    <ul style="margin-left: 25px; color: #555; line-height: 1.8;">
+                        <li>Suivre les mises à jour et nouvelles fonctionnalités de SAP (S/4HANA, SAP BTP, SAP Fiori)</li>
+                        <li>Identifier les intégrations de l'IA dans les solutions SAP (SAP AI Core, Machine Learning)</li>
+                        <li>Surveiller les tendances en cybersécurité pour les infrastructures SAP</li>
+                        <li>Découvrir les innovations en IA générative et leur application dans l'administration système</li>
+                        <li>Anticiper les évolutions métier pour améliorer mes compétences professionnelles</li>
+                    </ul>
+
+                    <h4 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.2em;">📊 Méthodologie</h4>
+                    <ul style="margin-left: 25px; color: #555; line-height: 1.8;">
+                        <li>Consultation quotidienne des flux RSS et Google Alerts</li>
+                        <li>Revue hebdomadaire des articles sauvegardés</li>
+                        <li>Classement par thématiques dans un tableau de bord</li>
+                        <li>Rédaction de fiches de synthèse sur les sujets majeurs</li>
+                        <li>Partage des découvertes avec l'équipe</li>
+                    </ul>
+
+                    <h4 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.2em;">💡 Découvertes récentes</h4>
+                    <ul style="margin-left: 25px; color: #555; line-height: 1.8;">
+                        <li><strong>Joule</strong> : Assistant IA générative de SAP intégré dans S/4HANA Cloud</li>
+                        <li><strong>SAP Datasphere</strong> : Solution de gestion unifiée des données avec IA/ML</li>
+                        <li><strong>RISE with SAP</strong> : Offre de migration tout-en-un vers le Cloud</li>
+                        <li><strong>GitHub Copilot</strong> : Génération de scripts ABAP par IA</li>
+                    </ul>
+                </div>
+
+                <h3 style="color: #764ba2; margin: 30px 0 20px 0; font-size: 1.4em;">🔗 Sources utilisées</h3>
+                
+                <div class="sources-grid">
+                    <div class="source-card">
+                        <a href="https://community.sap.com/" class="document-link" target="_blank">
+                            <span class="doc-icon">🌐</span>
+                            <span>SAP Community</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://news.sap.com/" class="document-link" target="_blank">
+                            <span class="doc-icon">📰</span>
+                            <span>SAP News Center</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://www.sap.com/products/artificial-intelligence.html" class="document-link" target="_blank">
+                            <span class="doc-icon">🤖</span>
+                            <span>SAP AI Solutions</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://www.sap.com/products/technology-platform.html" class="document-link" target="_blank">
+                            <span class="doc-icon">☁️</span>
+                            <span>SAP BTP</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://www.linkedin.com/company/sap/" class="document-link" target="_blank">
+                            <span class="doc-icon">💼</span>
+                            <span>LinkedIn SAP</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://feedly.com/" class="document-link" target="_blank">
+                            <span class="doc-icon">📡</span>
+                            <span>Feedly</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://www.google.com/alerts" class="document-link" target="_blank">
+                            <span class="doc-icon">🔔</span>
+                            <span>Google Alerts</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://www.youtube.com/@SAP" class="document-link" target="_blank">
+                            <span class="doc-icon">🎥</span>
+                            <span>YouTube SAP</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://www.reddit.com/r/SAP/" class="document-link" target="_blank">
+                            <span class="doc-icon">💬</span>
+                            <span>Reddit r/SAP</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://www.reddit.com/r/artificial/" class="document-link" target="_blank">
+                            <span class="doc-icon">🧠</span>
+                            <span>Reddit r/AI</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://sapinsider.org/" class="document-link" target="_blank">
+                            <span class="doc-icon">📖</span>
+                            <span>SAP Insider</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://blogs.sap.com/" class="document-link" target="_blank">
+                            <span class="doc-icon">✍️</span>
+                            <span>SAP Blogs</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://help.sap.com/" class="document-link" target="_blank">
+                            <span class="doc-icon">📚</span>
+                            <span>SAP Help Portal</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://openai.com/blog" class="document-link" target="_blank">
+                            <span class="doc-icon">🔬</span>
+                            <span>OpenAI Blog</span>
+                        </a>
+                    </div>
+                    <div class="source-card">
+                        <a href="https://github.com/topics/sap" class="document-link" target="_blank">
+                            <span class="doc-icon">💻</span>
+                            <span>GitHub SAP</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -816,7 +896,22 @@
         </footer>
     </div>
 
+    <!-- Modal Template -->
+    <div id="missionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Titre de la mission</h2>
+                <p id="modalDate" style="margin-top: 10px; opacity: 0.9;"></p>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Le contenu sera inséré dynamiquement -->
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Navigation entre les sections
         function showSection(sectionId) {
             // Hide all sections
             const sections = document.querySelectorAll('section');
@@ -837,6 +932,7 @@
             event.target.classList.add('active');
         }
 
+        // Filtrage des missions
         function filterMissions(category) {
             const missions = document.querySelectorAll('.mission-card');
             const filterButtons = document.querySelectorAll('.filter-btn');
@@ -853,6 +949,175 @@
                     mission.style.display = 'none';
                 }
             });
+        }
+
+        // Gestion des modals
+        function openModal(missionId) {
+            const modal = document.getElementById('missionModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDate = document.getElementById('modalDate');
+            const modalBody = document.getElementById('modalBody');
+
+            // Données des missions
+            const missions = {
+                'glpi': {
+                    title: 'Installation de GLPI via une VM Linux',
+                    date: 'Septembre 2025',
+                    context: 'À compléter : Décrivez le contexte de cette mission (besoin identifié, problématique, environnement...)',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées (étapes, actions concrètes...)',
+                    competences: 'À compléter : Listez les compétences acquises lors de cette mission',
+                    documents: []
+                },
+                'proxmox': {
+                    title: 'Installation d\'un serveur Proxmox',
+                    date: '2024-2025',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'ad': {
+                    title: 'Mise en place d\'un Active Directory',
+                    date: 'Mai 2025',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'roles': {
+                    title: 'Gestion des rôles et des utilisateurs',
+                    date: '2024-2025',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'usb': {
+                    title: 'Création d\'une clé de bootage Windows 10',
+                    date: 'Mars 2025',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'site': {
+                    title: 'Création d\'un site internet',
+                    date: 'Octobre 2024',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'sap-migration': {
+                    title: 'Migration et personnalisation SAP',
+                    date: '1ère année en entreprise',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'support-sap': {
+                    title: 'Support et optimisation SAP',
+                    date: '1ère année en entreprise',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'migration-us': {
+                    title: 'Migration réseau et hardware filiale US',
+                    date: '1ère année en entreprise',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'custo-sap': {
+                    title: 'Personnalisation du système SAP (Customizing)',
+                    date: 'Septembre - Novembre 2025',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                },
+                'imprimante': {
+                    title: 'Connexion et intégration imprimante 3D',
+                    date: 'Novembre 2025',
+                    context: 'À compléter : Décrivez le contexte de cette mission',
+                    objectives: 'À compléter : Listez les objectifs de cette mission',
+                    activities: 'À compléter : Décrivez les activités réalisées',
+                    competences: 'À compléter : Listez les compétences acquises',
+                    documents: []
+                }
+            };
+
+            const mission = missions[missionId];
+            
+            modalTitle.textContent = mission.title;
+            modalDate.textContent = '📅 ' + mission.date;
+            
+            modalBody.innerHTML = `
+                <div class="detail-section">
+                    <h3>📋 Contexte</h3>
+                    <div class="editable-content">${mission.context}</div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>🎯 Objectifs</h3>
+                    <div class="editable-content">${mission.objectives}</div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>⚙️ Activités réalisées</h3>
+                    <div class="editable-content">${mission.activities}</div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>💡 Compétences acquises</h3>
+                    <div class="editable-content">${mission.competences}</div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>📎 Documents et productions associés</h3>
+                    <ul class="document-list">
+                        ${mission.documents.length > 0 ? 
+                            mission.documents.map(doc => `
+                                <li>
+                                    <a href="${doc.url}" class="document-link" target="_blank">
+                                        <span class="doc-icon">${doc.icon}</span>
+                                        <span>${doc.name}</span>
+                                    </a>
+                                </li>
+                            `).join('') 
+                            : '<li style="color: #999; font-style: italic;">⚠️ Aucun document ajouté pour le moment. Vous pourrez ajouter vos documents ultérieurement en modifiant le code.</li>'
+                        }
+                    </ul>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('missionModal').style.display = 'none';
+        }
+
+        // Fermer le modal en cliquant en dehors
+        window.onclick = function(event) {
+            const modal = document.getElementById('missionModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
         }
     </script>
 </body>
