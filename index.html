@@ -14,8 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
             min-height: 100vh;
         }
 
@@ -26,12 +26,13 @@
         }
 
         header {
-            background: white;
+            background: linear-gradient(135deg, #1a2847 0%, #16213e 100%);
             border-radius: 15px;
             padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,255,150,0.1);
             text-align: center;
+            border: 1px solid rgba(0,255,150,0.2);
         }
 
         .profile-section {
@@ -46,14 +47,15 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00ff96 0%, #0099ff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #0a0e27;
             font-size: 60px;
             font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 25px rgba(0,255,150,0.3);
+            border: 3px solid #00ff96;
         }
 
         .profile-info {
@@ -61,65 +63,71 @@
         }
 
         h1 {
-            color: #667eea;
+            color: #00ff96;
             font-size: 2.5em;
             margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0,255,150,0.5);
         }
 
         .subtitle {
-            color: #666;
+            color: #0099ff;
             font-size: 1.2em;
             margin-bottom: 15px;
         }
 
         .info-item {
             margin: 5px 0;
-            color: #555;
+            color: #ffffff;
         }
 
         .info-item strong {
-            color: #764ba2;
+            color: #00ff96;
         }
 
         nav {
-            background: white;
+            background: linear-gradient(135deg, #1a2847 0%, #16213e 100%);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,255,150,0.1);
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 15px;
+            border: 1px solid rgba(0,255,150,0.2);
         }
 
         nav button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #00ff96 0%, #0099ff 100%);
+            color: #0a0e27;
             border: none;
             padding: 12px 25px;
             border-radius: 25px;
             cursor: pointer;
             font-size: 1em;
+            font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(0,255,150,0.2);
         }
 
         nav button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 20px rgba(0,255,150,0.4);
         }
 
         nav button.active {
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            background: linear-gradient(135deg, #0099ff 0%, #00ff96 100%);
+            box-shadow: 0 0 15px rgba(0,255,150,0.5);
         }
 
         section {
-            background: white;
+            background: linear-gradient(135deg, #1a2847 0%, #16213e 100%);
             border-radius: 15px;
             padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,255,150,0.1);
             display: none;
+            border: 1px solid rgba(0,255,150,0.2);
         }
 
         section.active {
@@ -133,17 +141,18 @@
         }
 
         h2 {
-            color: #667eea;
+            color: #00ff96;
             font-size: 2em;
             margin-bottom: 25px;
-            border-bottom: 3px solid #764ba2;
+            border-bottom: 3px solid #0099ff;
             padding-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0,255,150,0.3);
         }
 
         .about-content {
             font-size: 1.1em;
             line-height: 1.8;
-            color: #555;
+            color: #ffffff;
         }
 
         .competences-grid {
@@ -154,19 +163,22 @@
         }
 
         .competence-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #0f1b2e 0%, #1a2847 100%);
             padding: 20px;
             border-radius: 10px;
+            border: 1px solid rgba(0,255,150,0.2);
             transition: transform 0.3s;
+            box-shadow: 0 0 10px rgba(0,255,150,0.1);
         }
 
         .competence-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0,255,150,0.2);
+            border-color: rgba(0,255,150,0.5);
         }
 
         .competence-card h3 {
-            color: #764ba2;
+            color: #0099ff;
             margin-bottom: 15px;
             font-size: 1.2em;
         }
@@ -178,66 +190,71 @@
 
         .competence-card li {
             padding: 5px 0;
-            color: #555;
+            color: #ffffff;
         }
 
         .competence-card li:before {
-            content: "✓ ";
-            color: #667eea;
+            content: "▸ ";
+            color: #00ff96;
             font-weight: bold;
             margin-right: 8px;
         }
 
         .mission-card {
-            background: #f9f9f9;
-            border-left: 4px solid #667eea;
+            background: linear-gradient(135deg, #0f1b2e 0%, #1a2847 100%);
+            border-left: 4px solid #00ff96;
             padding: 25px;
             margin-bottom: 25px;
             border-radius: 8px;
             transition: all 0.3s;
             cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,255,150,0.1);
+            border: 1px solid rgba(0,255,150,0.15);
         }
 
         .mission-card:hover {
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #1a2847 0%, #16213e 100%);
+            box-shadow: 0 10px 25px rgba(0,255,150,0.2);
             transform: translateX(5px);
+            border-left-color: #0099ff;
         }
 
         .mission-card h3 {
-            color: #764ba2;
+            color: #00ff96;
             margin-bottom: 10px;
             font-size: 1.3em;
         }
 
         .mission-date {
-            color: #667eea;
+            color: #0099ff;
             font-weight: bold;
             margin-bottom: 10px;
             font-size: 0.9em;
         }
 
         .mission-description {
-            color: #555;
+            color: #ffffff;
             margin-bottom: 15px;
             line-height: 1.6;
         }
 
         .view-details-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #00ff96 0%, #0099ff 100%);
+            color: #0a0e27;
             border: none;
             padding: 10px 20px;
             border-radius: 20px;
             cursor: pointer;
             font-size: 0.9em;
+            font-weight: bold;
             transition: all 0.3s;
             margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0,255,150,0.2);
         }
 
         .view-details-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 20px rgba(0,255,150,0.4);
         }
 
         .competences-tags {
@@ -248,11 +265,13 @@
         }
 
         .tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #00ff96 0%, #0099ff 100%);
+            color: #0a0e27;
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.85em;
+            font-weight: bold;
+            box-shadow: 0 0 8px rgba(0,255,150,0.3);
         }
 
         .filter-buttons {
@@ -264,8 +283,9 @@
         }
 
         .filter-btn {
-            background: #f0f0f0;
-            border: 2px solid #ddd;
+            background: rgba(0,255,150,0.1);
+            border: 2px solid rgba(0,255,150,0.3);
+            color: #ffffff;
             padding: 8px 20px;
             border-radius: 20px;
             cursor: pointer;
@@ -273,9 +293,10 @@
         }
 
         .filter-btn:hover, .filter-btn.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: #667eea;
+            background: linear-gradient(135deg, #00ff96 0%, #0099ff 100%);
+            color: #0a0e27;
+            border-color: #00ff96;
+            box-shadow: 0 0 15px rgba(0,255,150,0.4);
         }
 
         /* Modal Styles */
@@ -288,12 +309,12 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0,0,0,0.8);
             animation: fadeIn 0.3s;
         }
 
         .modal-content {
-            background-color: white;
+            background: linear-gradient(135deg, #1a2847 0%, #16213e 100%);
             margin: 2% auto;
             padding: 0;
             border-radius: 15px;
@@ -301,8 +322,9 @@
             max-width: 900px;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 50px rgba(0,255,150,0.2);
             animation: slideDown 0.3s;
+            border: 1px solid rgba(0,255,150,0.3);
         }
 
         @keyframes slideDown {
@@ -311,25 +333,27 @@
         }
 
         .modal-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #00ff96 0%, #0099ff 100%);
+            color: #0a0e27;
             padding: 30px;
             border-radius: 15px 15px 0 0;
         }
 
         .modal-header h2 {
-            color: white;
+            color: #0a0e27;
             border: none;
             margin: 0;
             padding: 0;
+            text-shadow: none;
         }
 
         .modal-body {
             padding: 30px;
+            color: #ffffff;
         }
 
         .close {
-            color: white;
+            color: #0a0e27;
             float: right;
             font-size: 35px;
             font-weight: bold;
@@ -338,26 +362,27 @@
         }
 
         .close:hover {
-            color: #f0f0f0;
+            color: #fff;
         }
 
         .detail-section {
             margin-bottom: 25px;
             padding: 20px;
-            background: #f9f9f9;
+            background: rgba(0,255,150,0.05);
             border-radius: 10px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #00ff96;
+            border: 1px solid rgba(0,255,150,0.2);
         }
 
         .detail-section h3 {
-            color: #764ba2;
+            color: #00ff96;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
 
         .detail-section ul {
             margin-left: 20px;
-            color: #555;
+            color: #ffffff;
         }
 
         .detail-section ul li {
@@ -366,55 +391,26 @@
         }
 
         .detail-section p {
-            color: #555;
+            color: #ffffff;
             line-height: 1.8;
         }
 
         .editable-content {
-            background: #fff;
+            background: rgba(0,255,150,0.05);
             padding: 15px;
             border-radius: 8px;
-            border: 1px dashed #ddd;
+            border: 1px solid rgba(0,255,150,0.2);
             min-height: 100px;
-            color: #999;
+            color: #ffffff;
             font-style: italic;
         }
 
-        .document-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .document-list li {
-            padding: 10px;
-            margin-bottom: 8px;
-            background: white;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .document-link {
-            color: #764ba2;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: color 0.3s;
-        }
-
-        .document-link:hover {
-            color: #667eea;
-        }
-
-        .doc-icon {
-            font-size: 1.3em;
-        }
-
         .veille-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            background: linear-gradient(135deg, #0f1b2e 0%, #1a2847 100%);
             padding: 30px;
             border-radius: 15px;
             margin-bottom: 30px;
+            border: 1px solid rgba(0,255,150,0.2);
         }
 
         .sources-grid {
@@ -425,25 +421,28 @@
         }
 
         .source-card {
-            background: white;
+            background: rgba(0,255,150,0.05);
             padding: 15px;
             border-radius: 10px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #00ff96;
             transition: all 0.3s;
+            border: 1px solid rgba(0,255,150,0.2);
         }
 
         .source-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,255,150,0.2);
+            border-left-color: #0099ff;
         }
 
         footer {
-            background: white;
+            background: linear-gradient(135deg, #1a2847 0%, #16213e 100%);
             border-radius: 15px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            color: #666;
+            box-shadow: 0 5px 15px rgba(0,255,150,0.1);
+            color: #ffffff;
+            border: 1px solid rgba(0,255,150,0.2);
         }
 
         @media (max-width: 768px) {
@@ -471,6 +470,43 @@
                 width: 95%;
                 margin: 5% auto;
             }
+        }
+
+        .veille-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 1em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,255,150,0.15);
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            background: rgba(0,255,150,0.05);
+        }
+
+        .veille-table th {
+            background: linear-gradient(90deg, #00ff96, #0099ff);
+            color: #0a0e27;
+            padding: 15px 9px;
+            text-align: left;
+            font-weight: 600;
+            border: none;
+        }
+
+        .veille-table td {
+            padding: 13px 9px;
+            border: none;
+            border-bottom: 1px solid rgba(0,255,150,0.1);
+            background: rgba(0,255,150,0.02);
+        }
+
+        .veille-table tr:nth-child(even) {
+            background: rgba(0,255,150,0.08);
+        }
+
+        .veille-table tr:last-child td {
+            border-bottom: none;
         }
     </style>
 </head>
@@ -507,27 +543,28 @@
     <p style="font-size: 1.1rem; margin-bottom: 15px;">
         Ce portfolio est la vitrine de mes réalisations académiques et professionnelles,
         de mes compétences et de mon parcours. Vous y découvrirez mes projets, mon évolution
-        ainsi que mon engagement dans le domaine de l’informatique.
+        ainsi que mon engagement dans le domaine de l'informatique.
     </p>
 
     <div style="
-        background: #f4f4f4;
+        background: rgba(0,255,150,0.05);
         padding: 20px;
         border-radius: 10px;
         margin-top: 20px;
+        border: 1px solid rgba(0,255,150,0.2);
     ">
-        <h3 style="margin-top: 0; font-size: 1.4rem;">Mon rôle chez FMO Consulting</h3>
-        <p style="font-size: 1.05rem;">
+        <h3 style="margin-top: 0; font-size: 1.4rem; color: #00ff96;">Mon rôle chez FMO Consulting</h3>
+        <p style="font-size: 1.05rem; color: #ffffff;">
             Je suis consultant support SAP chez FMO Consulting. Mes missions incluent :
         </p>
-        <ul style="font-size: 1.05rem; padding-left: 20px; margin-bottom: 15px;">
+        <ul style="font-size: 1.05rem; padding-left: 20px; margin-bottom: 15px; color: #ffffff;">
             <li>Migrations de données vers SAP S/4HANA,</li>
             <li>Paramétrage (customizing) des modules SAP,</li>
-            <li>Maintenance de l’infrastructure réseau,</li>
+            <li>Maintenance de l'infrastructure réseau,</li>
             <li>Accompagnement et support aux utilisateurs,</li>
-            <li>Rédaction et suivi des comptes rendus d’intervention (CRD).</li>
+            <li>Rédaction et suivi des comptes rendus d'intervention (CRD).</li>
         </ul>
-        <p style="font-size: 1.05rem;">
+        <p style="font-size: 1.05rem; color: #ffffff;">
             Mon objectif est de garantir la stabilité, la performance et la fiabilité
             du système SAP tout en assurant un support clair et efficace.
         </p>
@@ -762,123 +799,87 @@
             </div>
         </section>
 
-       <section id="veille">
-    <h2>Veille Informationnelle</h2>
-    <div class="veille-section">
-        <h3 style="color: #764ba2; margin-bottom: 20px; font-size: 1.5em;">L’intelligence artificielle dans SAP : impacts, usages et sécurité (2025)</h3>
-        <style>
-            .veille-table {
-                width: 100%;
-                border-collapse: separate;
-                border-spacing: 0;
-                font-size: 1em;
-                color: #444;
-                margin-bottom:15px;
-                box-shadow: 0 2px 8px rgba(134, 144, 255, 0.12);
-                border-radius: 10px 10px 0 0;
-                overflow: hidden;
-                background: #fff;
-            }
-            .veille-table th {
-                background: linear-gradient(90deg, #667eea, #764ba2);
-                color: #fff;
-                padding: 15px 9px;
-                text-align: left;
-                font-weight: 600;
-                border: none;
-            }
-            .veille-table td {
-                padding: 13px 9px;
-                border: none;
-                border-bottom: 1px solid #eee;
-            }
-            .veille-table tr:nth-child(even) {
-                background: #f4f6fa;
-            }
-            .veille-table tr:last-child td {
-                border-bottom: none;
-            }
-        </style>
-        <div style="background: white; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
-            <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">
-                <strong>Contexte :</strong> En tant que consultant SAP chez FMO Consulting et étudiant BTS SIO SISR, je mène une veille sur <b>l’intégration de l’IA dans les environnements SAP</b> (S/4HANA, BTP, cloud). Ce sujet est stratégique car il combine l’innovation, la sécurité et l’évolution des métiers IT/SAP.
-            </p>
-            <h4 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.2em;">🎯 Objectifs de la veille</h4>
-            <ul style="margin-left: 25px; color: #555; line-height: 1.8;">
-                <li>Identifier les innovations IA/Cloud dans SAP (Joule, AI Foundation, copilotes…)</li>
-                <li>Recenser des cas d’usage : automatisation, détection de fraudes, chatbots, pilotage projet</li>
-                <li>Analyser les nouveaux risques et solutions de sécurité liés à l’IA SAP</li>
-                <li>Comprendre l’impact sur le métier de consultant SAP/SISR</li>
-                <li>Monter en compétences pour anticiper les besoins des entreprises</li>
-            </ul>
-            <h4 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.2em;">📊 Méthodologie</h4>
-            <ul style="margin-left: 25px; color: #555; line-height: 1.8;">
-                <li>Suivi Google Alerts : SAP IA, SAP Joule, cloud SAP AI 2025…</li>
-                <li>Veille hebdo sur SAP News Center, Wavestone, Aymax, Archimag, ICTJournal</li>
-                <li>Modélisation d’une fiche d’analyse pour chaque découverte</li>
-            </ul>
-            <h4 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.2em;">💡 Découvertes récentes (extraits de fiches de veille 2025)</h4>
-            <table class="veille-table">
-                <tr>
-                    <th>Date</th>
-                    <th>Source</th>
-                    <th>Sujet</th>
-                    <th>Résumé / Analyse</th>
-                </tr>
-                <tr>
-                    <td>02/09/2025</td>
-                    <td>Aymax</td>
-                    <td>IA & Cloud sur SAP</td>
-                    <td>Nouvelle stratégie SAP : IA générative + cloud. Agents IA métiers, pilotage des datas.</td>
-                </tr>
-                <tr>
-                    <td>03/11/2025</td>
-                    <td>SAP News FR</td>
-                    <td>Joule copilote IA</td>
-                    <td>Déploiement SAP Joule et copilotes IA : productivité (support, analyse, formation) accrue.<br>Partenariats IA français.</td>
-                </tr>
-                <tr>
-                    <td>24/06/2025</td>
-                    <td>Wavestone</td>
-                    <td>IA dans l’environnement SAP</td>
-                    <td>Automatisation, sécurité, gouvernance IA intégrée, besoin en compétences SISR/Cloud renforcé.</td>
-                </tr>
-                <tr>
-                    <td>25/01/2025</td>
-                    <td>Courtois Consulting</td>
-                    <td>SAP S/4HANA et IA : métiers</td>
-                    <td>Clôture comptable auto, chatbots, analyse data IA : gain de temps, évolution du métier consultant.</td>
-                </tr>
-            </table>
-        </div>
-        <h3 style="color: #764ba2; margin: 30px 0 20px 0; font-size: 1.4em;">🔗 Sources utilisées</h3>
-        <div class="sources-grid">
-            <div class="source-card"><a href="https://news.sap.com/france/" class="document-link" target="_blank"><span class="doc-icon">📰</span> <span>SAP News Center</span></a></div>
-            <div class="source-card"><a href="https://www.wavestone.com/fr/insight/apports-ia-environnement-sap/" class="document-link" target="_blank"><span class="doc-icon">🤖</span> <span>Wavestone</span></a></div>
-            <div class="source-card"><a href="https://aymax.fr/innovations-sap-intelligence-artificielle/" class="document-link" target="_blank"><span class="doc-icon">☁️</span> <span>Aymax</span></a></div>
-            <div class="source-card"><a href="https://courtois-consulting.com/sap-s4hana-et-ia-quels-cas-dusage-metiers-en-2025/" class="document-link" target="_blank"><span class="doc-icon">🛠️</span> <span>Courtois Consulting</span></a></div>
-            <div class="source-card"><a href="https://archimag.com/veille-documentation/2025/09/09/veille-quand-ia-decuple-connaissance-accelere-prise-decision" class="document-link" target="_blank"><span class="doc-icon">📚</span> <span>Archimag</span></a></div>
-            <div class="source-card"><a href="https://www.ictjournal.ch/articles/2025-09-18/sap-devoile-sa-strategie-cloud-data-et-ia-en-suisse-romande" class="document-link" target="_blank"><span class="doc-icon">🌐</span> <span>ICTJournal</span></a></div>
-        </div>
-    </div>
-</section>
-
-
+        <section id="veille">
+            <h2>Veille Informationnelle</h2>
+            <div class="veille-section">
+                <h3 style="color: #00ff96; margin-bottom: 20px; font-size: 1.5em;">L'intelligence artificielle dans SAP : impacts, usages et sécurité (2025)</h3>
+                <div style="background: rgba(0,255,150,0.05); padding: 25px; border-radius: 10px; margin-bottom: 25px; border: 1px solid rgba(0,255,150,0.2);">
+                    <p style="color: #ffffff; line-height: 1.8; margin-bottom: 15px;">
+                        <strong style="color: #00ff96;">Contexte :</strong> En tant que consultant SAP chez FMO Consulting et étudiant BTS SIO SISR, je mène une veille sur <b>l'intégration de l'IA dans les environnements SAP</b> (S/4HANA, BTP, cloud). Ce sujet est stratégique car il combine l'innovation, la sécurité et l'évolution des métiers IT/SAP.
+                    </p>
+                    <h4 style="color: #0099ff; margin: 20px 0 15px 0; font-size: 1.2em;">🎯 Objectifs de la veille</h4>
+                    <ul style="margin-left: 25px; color: #ffffff; line-height: 1.8;">
+                        <li>Identifier les innovations IA/Cloud dans SAP (Joule, AI Foundation, copilotes…)</li>
+                        <li>Recenser des cas d'usage : automatisation, détection de fraudes, chatbots, pilotage projet</li>
+                        <li>Analyser les nouveaux risques et solutions de sécurité liés à l'IA SAP</li>
+                        <li>Comprendre l'impact sur le métier de consultant SAP/SISR</li>
+                        <li>Monter en compétences pour anticiper les besoins des entreprises</li>
+                    </ul>
+                    <h4 style="color: #0099ff; margin: 20px 0 15px 0; font-size: 1.2em;">📊 Méthodologie</h4>
+                    <ul style="margin-left: 25px; color: #ffffff; line-height: 1.8;">
+                        <li>Suivi Google Alerts : SAP IA, SAP Joule, cloud SAP AI 2025…</li>
+                        <li>Veille hebdo sur SAP News Center, Wavestone, Aymax, Archimag, ICTJournal</li>
+                        <li>Modélisation d'une fiche d'analyse pour chaque découverte</li>
+                    </ul>
+                    <h4 style="color: #0099ff; margin: 20px 0 15px 0; font-size: 1.2em;">💡 Découvertes récentes (extraits de fiches de veille 2025)</h4>
+                    <table class="veille-table">
+                        <tr>
+                            <th>Date</th>
+                            <th>Source</th>
+                            <th>Sujet</th>
+                            <th>Résumé / Analyse</th>
+                        </tr>
+                        <tr>
+                            <td>02/09/2025</td>
+                            <td>Aymax</td>
+                            <td>IA & Cloud sur SAP</td>
+                            <td>Nouvelle stratégie SAP : IA générative + cloud. Agents IA métiers, pilotage des datas.</td>
+                        </tr>
+                        <tr>
+                            <td>03/11/2025</td>
+                            <td>SAP News FR</td>
+                            <td>Joule copilote IA</td>
+                            <td>Déploiement SAP Joule et copilotes IA : productivité (support, analyse, formation) accrue.<br>Partenariats IA français.</td>
+                        </tr>
+                        <tr>
+                            <td>24/06/2025</td>
+                            <td>Wavestone</td>
+                            <td>IA dans l'environnement SAP</td>
+                            <td>Automatisation, sécurité, gouvernance IA intégrée, besoin en compétences SISR/Cloud renforcé.</td>
+                        </tr>
+                        <tr>
+                            <td>25/01/2025</td>
+                            <td>Courtois Consulting</td>
+                            <td>SAP S/4HANA et IA : métiers</td>
+                            <td>Clôture comptable auto, chatbots, analyse data IA : gain de temps, évolution du métier consultant.</td>
+                        </tr>
+                    </table>
+                </div>
+                <h3 style="color: #00ff96; margin: 30px 0 20px 0; font-size: 1.4em;">🔗 Sources utilisées</h3>
+                <div class="sources-grid">
+                    <div class="source-card"><a href="https://news.sap.com/france/" class="document-link" target="_blank"><span class="doc-icon">📰</span> <span>SAP News Center</span></a></div>
+                    <div class="source-card"><a href="https://www.wavestone.com/fr/insight/apports-ia-environnement-sap/" class="document-link" target="_blank"><span class="doc-icon">🤖</span> <span>Wavestone</span></a></div>
+                    <div class="source-card"><a href="https://aymax.fr/innovations-sap-intelligence-artificielle/" class="document-link" target="_blank"><span class="doc-icon">☁️</span> <span>Aymax</span></a></div>
+                    <div class="source-card"><a href="https://courtois-consulting.com/sap-s4hana-et-ia-quels-cas-dusage-metiers-en-2025/" class="document-link" target="_blank"><span class="doc-icon">🛠️</span> <span>Courtois Consulting</span></a></div>
+                    <div class="source-card"><a href="https://archimag.com/veille-documentation/2025/09/09/veille-quand-ia-decuple-connaissance-accelere-prise-decision" class="document-link" target="_blank"><span class="doc-icon">📚</span> <span>Archimag</span></a></div>
+                    <div class="source-card"><a href="https://www.ictjournal.ch/articles/2025-09-18/sap-devoile-sa-strategie-cloud-data-et-ia-en-suisse-romande" class="document-link" target="_blank"><span class="doc-icon">🌐</span> <span>ICTJournal</span></a></div>
+                </div>
+            </div>
+        </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <div class="about-content">
-                <p><strong>Nom :</strong> Noa Monteiro</p>
-                <p><strong>Formation :</strong> BTS SIO - Option SISR</p>
-                <p><strong>Centre de formation :</strong> CFA ISCIO - Orsay</p>
-                <p><strong>Entreprise :</strong> FMO Consulting</p>
-                <p><strong>Poste :</strong> Consultant SAP en alternance</p>
-                <p><strong>Session :</strong> 2026</p>
+                <p><strong style="color: #00ff96;">Nom :</strong> Noa Monteiro</p>
+                <p><strong style="color: #00ff96;">Formation :</strong> BTS SIO - Option SISR</p>
+                <p><strong style="color: #00ff96;">Centre de formation :</strong> CFA ISCIO - Orsay</p>
+                <p><strong style="color: #00ff96;">Entreprise :</strong> FMO Consulting</p>
+                <p><strong style="color: #00ff96;">Poste :</strong> Consultant SAP en alternance</p>
+                <p><strong style="color: #00ff96;">Session :</strong> 2026</p>
                 <br>
-                <p><em>📧 Email : [À compléter]</em></p>
+                <p><em>📧 Email : noadiego.monteiro@gmail.com </em></p>
                 <p><em>🔗 LinkedIn : [À compléter]</em></p>
-                <p><em>💻 GitHub : [À compléter]</em></p>
-                <p><em>📱 Téléphone : [À compléter]</em></p>
+                <p><em>📱 Téléphone : 06 67 39 60 70 </em></p>
             </div>
         </section>
 
@@ -1054,49 +1055,26 @@
             };
 
             const mission = missions[missionId];
-            
             modalTitle.textContent = mission.title;
-            modalDate.textContent = '📅 ' + mission.date;
-            
+            modalDate.textContent = mission.date;
             modalBody.innerHTML = `
                 <div class="detail-section">
-                    <h3>📋 Contexte</h3>
+                    <h3>Contexte</h3>
                     <div class="editable-content">${mission.context}</div>
                 </div>
-
                 <div class="detail-section">
-                    <h3>🎯 Objectifs</h3>
+                    <h3>Objectifs</h3>
                     <div class="editable-content">${mission.objectives}</div>
                 </div>
-
                 <div class="detail-section">
-                    <h3>⚙️ Activités réalisées</h3>
+                    <h3>Activités réalisées</h3>
                     <div class="editable-content">${mission.activities}</div>
                 </div>
-
                 <div class="detail-section">
-                    <h3>💡 Compétences acquises</h3>
+                    <h3>Compétences acquises</h3>
                     <div class="editable-content">${mission.competences}</div>
                 </div>
-
-                <div class="detail-section">
-                    <h3>📎 Documents et productions associés</h3>
-                    <ul class="document-list">
-                        ${mission.documents.length > 0 ? 
-                            mission.documents.map(doc => `
-                                <li>
-                                    <a href="${doc.url}" class="document-link" target="_blank">
-                                        <span class="doc-icon">${doc.icon}</span>
-                                        <span>${doc.name}</span>
-                                    </a>
-                                </li>
-                            `).join('') 
-                            : '<li style="color: #999; font-style: italic;">⚠️ Aucun document ajouté pour le moment. Vous pourrez ajouter vos documents ultérieurement en modifiant le code.</li>'
-                        }
-                    </ul>
-                </div>
             `;
-
             modal.style.display = 'block';
         }
 
@@ -1104,7 +1082,6 @@
             document.getElementById('missionModal').style.display = 'none';
         }
 
-        // Fermer le modal en cliquant en dehors
         window.onclick = function(event) {
             const modal = document.getElementById('missionModal');
             if (event.target == modal) {
