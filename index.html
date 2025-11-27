@@ -1034,14 +1034,14 @@
                     competences: 'À compléter : Listez les compétences acquises',
                     documents: []
                 },
-                'custo-sap': {
-                    title: 'Personnalisation du système SAP (Customizing)',
-                    date: 'Septembre - Novembre 2025',
-                    context: 'À compléter : Décrivez le contexte de cette mission',
-                    objectives: 'À compléter : Listez les objectifs de cette mission',
-                    activities: 'À compléter : Décrivez les activités réalisées',
-                    competences: 'À compléter : Listez les compétences acquises',
-                    documents: []
+                "custo-sap": {
+    title: "Personnalisation du système SAP (Customizing)",
+    date: "Septembre - Novembre 2025",
+    context: "Dans le cadre de mon alternance chez FMO Consulting, j'ai été chargé de la personnalisation du système SAP afin d'accompagner l'expansion commerciale d'un client du secteur du retail. L'entreprise ouvre de nouvelles boutiques sur le territoire, et chaque nouveau point de vente nécessite la création d'une plant dans SAP avec S/4HANA en environnement de développement (DEV) sur SAP GUI.<br><br>Définition : Une plant (ou site) dans SAP représente une unité organisationnelle où sont stockées les marchandises et où s'effectuent les opérations logistiques et commerciales. Chaque boutique doit être configurée comme une plant distincte afin de permettre :<br>- La gestion des stocks locaux<br>- Le rattachement aux organisations d'achat (Purchase Organization)<br>- Le rattachement aux organisations de vente (Sales Organization)<br>- La création de business partners associés à ce point de vente<br><br>Ma mission consiste à traduire ces informations métier en configuration technique SAP, en créant la plant et en l'associant correctement aux structures organisationnelles existantes, tout en utilisant une plant de référence comme modèle.",
+       objectives: "Adapter le module SAP S/4HANA aux besoins métier spécifiques<br>Documenter les étapes et garantir la traçabilité des modifications<br><br>Environnement technique :<br>Système SAP : S/4HANA<br>Environnement : DEV (Développement)<br>Interface : SAP GUI<br>Modules concernés : MM (Materials Management), SD (Sales & Distribution)<br>Base de données : SAP HANA",
+    activities: "- Utilisation de la transaction SAP : Saisie des paramètres dans l'interface de création de plant<br>- Configuration de la plant : Renseignement du type (Store), du nom, de l'adresse et association aux structures organisationnelles<br>- Création du Business Partner : Utilisation de \"Goto Business Partner\" pour créer le BP avec le Role Grouping approprié<br>- Copie depuis une plant de référence : Reprise des paramètres d'une boutique existante similaire<br>- Tests de validation : Vérification de la création et du bon rattachement aux organisations<br>- Mise à jour du CRD : Changement du statut de \"En attente\" à \"Terminé\" dans l'outil de suivi",
+    competences: "Résultats et compétences acquises :</strong><br>- Nombre de plants créées : 42 boutiques configurées sur la période (septembre-novembre 2025)<br>- Délai moyen : Création d'une plant en environ 15 à 20 minutes par boutique<br>- Impact business : Les nouvelles boutiques peuvent être opérationnelles dans SAP dès leur ouverture physique<br>- Qualité : 100 % des CRD traités validés sans retour client<br>- Documentation : Procédure standardisée créée et partagée sur SharePoint/serveur de l'entreprise",
+    documents: []
                 },
                 'imprimante': {
                     title: 'Connexion et intégration imprimante 3D',
@@ -1071,7 +1071,7 @@
                     <div class="editable-content">${mission.activities}</div>
                 </div>
                 <div class="detail-section">
-                    <h3>Compétences acquises</h3>
+                    <h3>Résultats obtenus</h3>
                     <div class="editable-content">${mission.competences}</div>
                 </div>
             `;
