@@ -405,6 +405,45 @@
             font-style: italic;
         }
 
+        /* NOUVEAU : Styles pour les liens de documentation */
+        .documents-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0,255,150,0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(0,255,150,0.2);
+        }
+
+        .document-link {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #00ff96 0%, #0099ff 100%);
+            color: #0a0e27;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 8px 8px 8px 0;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(0,255,150,0.2);
+        }
+
+        .document-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,255,150,0.4);
+        }
+
+        .doc-icon {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .no-documents {
+            color: #ffffff;
+            font-style: italic;
+            opacity: 0.7;
+        }
+
         .veille-section {
             background: linear-gradient(135deg, #0f1b2e 0%, #1a2847 100%);
             padding: 30px;
@@ -960,7 +999,9 @@
                     objectives: 'À compléter : Listez les objectifs de cette mission',
                     activities: 'À compléter : Décrivez les activités réalisées (étapes, actions concrètes...)',
                     competences: 'À compléter : Listez les compétences acquises lors de cette mission',
-                    documents: []
+                    documents: [
+                        // Exemple : { name: 'Guide d\'installation', url: 'https://github.com/ton-nom/docs/glpi-guide.pdf', icon: '📄' }
+                    ]
                 },
                 'proxmox': {
                     title: 'Installation d\'un serveur Proxmox',
@@ -1034,14 +1075,16 @@
                     competences: 'À compléter : Listez les compétences acquises',
                     documents: []
                 },
-                "custo-sap": {
-    title: "Personnalisation du système SAP (Customizing)",
-    date: "Septembre - Novembre 2025",
-    context: "Dans le cadre de mon alternance chez FMO Consulting, j'ai été chargé de la personnalisation du système SAP afin d'accompagner l'expansion commerciale d'un client du secteur du retail. L'entreprise ouvre de nouvelles boutiques sur le territoire, et chaque nouveau point de vente nécessite la création d'une plant dans SAP avec S/4HANA en environnement de développement (DEV) sur SAP GUI.<br><br>Définition : Une plant (ou site) dans SAP représente une unité organisationnelle où sont stockées les marchandises et où s'effectuent les opérations logistiques et commerciales. Chaque boutique doit être configurée comme une plant distincte afin de permettre :<br>- La gestion des stocks locaux<br>- Le rattachement aux organisations d'achat (Purchase Organization)<br>- Le rattachement aux organisations de vente (Sales Organization)<br>- La création de business partners associés à ce point de vente<br><br>Ma mission consiste à traduire ces informations métier en configuration technique SAP, en créant la plant et en l'associant correctement aux structures organisationnelles existantes, tout en utilisant une plant de référence comme modèle.",
-       objectives: "Adapter le module SAP S/4HANA aux besoins métier spécifiques<br>Documenter les étapes et garantir la traçabilité des modifications<br><br>Environnement technique :<br>Système SAP : S/4HANA<br>Environnement : DEV (Développement)<br>Interface : SAP GUI<br>Modules concernés : MM (Materials Management), SD (Sales & Distribution)<br>Base de données : SAP HANA",
-    activities: "- Utilisation de la transaction SAP : Saisie des paramètres dans l'interface de création de plant<br>- Configuration de la plant : Renseignement du type (Store), du nom, de l'adresse et association aux structures organisationnelles<br>- Création du Business Partner : Utilisation de \"Goto Business Partner\" pour créer le BP avec le Role Grouping approprié<br>- Copie depuis une plant de référence : Reprise des paramètres d'une boutique existante similaire<br>- Tests de validation : Vérification de la création et du bon rattachement aux organisations<br>- Mise à jour du CRD : Changement du statut de \"En attente\" à \"Terminé\" dans l'outil de suivi",
-    competences: "Résultats et compétences acquises :</strong><br>- Nombre de plants créées : 42 boutiques configurées sur la période (septembre-novembre 2025)<br>- Délai moyen : Création d'une plant en environ 15 à 20 minutes par boutique<br>- Impact business : Les nouvelles boutiques peuvent être opérationnelles dans SAP dès leur ouverture physique<br>- Qualité : 100 % des CRD traités validés sans retour client<br>- Documentation : Procédure standardisée créée et partagée sur SharePoint/serveur de l'entreprise",
-    documents: []
+                'custo-sap': {
+                    title: 'Personnalisation du système SAP (Customizing)',
+                    date: 'Septembre - Novembre 2025',
+                    context: ' Dans le cadre de mon alternance chez FMO Consulting, j\'ai été chargé de la personnalisation du système SAP afin d\'accompagner l\'expansion commerciale d\'un client du secteur du retail. L\'entreprise ouvre de nouvelles boutiques sur le territoire, et chaque nouveau point de vente nécessite la création d\'une plant dans SAP avec S/4HANA en environnement de développement (DEV) sur SAP GUI.<br><br>Définition : Une plant (ou site) dans SAP représente une unité organisationnelle où sont stockées les marchandises et où s\'effectuent les opérations logistiques et commerciales. Chaque boutique doit être configurée comme une plant distincte afin de permettre :<br>- La gestion des stocks locaux<br>- Le rattachement aux organisations d\'achat (Purchase Organization)<br>- Le rattachement aux organisations de vente (Sales Organization)<br>- La création de business partners associés à ce point de vente<br><br>Ma mission consiste à traduire ces informations métier en configuration technique SAP, en créant la plant et en l\'associant correctement aux structures organisationnelles existantes, tout en utilisant une plant de référence comme modèle.',
+                    objectives: 'Adapter le module SAP S/4HANA aux besoins métier spécifiques<br>Documenter les étapes et garantir la traçabilité des modifications<br><br>Environnement technique :<br>Système SAP : S/4HANA<br>Environnement : DEV (Développement)<br>Interface : SAP GUI<br>Modules concernés : MM (Materials Management), SD (Sales & Distribution)<br>Base de données : SAP HANA',
+                    activities: '- Utilisation de la transaction SAP : Saisie des paramètres dans l\'interface de création de plant<br>- Configuration de la plant : Renseignement du type (Store), du nom, de l\'adresse et association aux structures organisationnelles<br>- Création du Business Partner : Utilisation de "Goto Business Partner" pour créer le BP avec le Role Grouping approprié<br>- Copie depuis une plant de référence : Reprise des paramètres d\'une boutique existante similaire<br>- Tests de validation : Vérification de la création et du bon rattachement aux organisations<br>- Mise à jour du CRD : Changement du statut de "En attente" à "Terminé" dans l\'outil de suivi',
+                    competences: 'Résultats et compétences acquises :</strong><br>- Nombre de plants créées : 42 boutiques configurées sur la période (septembre-novembre 2025)<br>- Délai moyen : Création d\'une plant en environ 15 à 20 minutes par boutique<br>- Impact business : Les nouvelles boutiques peuvent être opérationnelles dans SAP dès leur ouverture physique<br>- Qualité : 100 % des CRD traités validés sans retour client<br>- Documentation : Procédure standardisée créée et partagée sur SharePoint/serveur de l\'entreprise',
+                    documents: [
+        { name: 'Procédure complète', url: 'file:///C:/Users/noadi/Desktop/Portfolio%20E5/Document%20CUSTO%20SAP.pdf', icon: '📋' }
+    ]
                 },
                 'imprimante': {
                     title: 'Connexion et intégration imprimante 3D',
@@ -1057,6 +1100,19 @@
             const mission = missions[missionId];
             modalTitle.textContent = mission.title;
             modalDate.textContent = mission.date;
+            
+            // Construire la section documents
+            let documentsHTML = '';
+            if (mission.documents && mission.documents.length > 0) {
+                documentsHTML = '<div class="documents-section"><h3 style="color: #00ff96; margin-bottom: 15px;">📎 Documentation</h3>';
+                mission.documents.forEach(doc => {
+                    documentsHTML += `<a href="${doc.url}" class="document-link" target="_blank"><span class="doc-icon">${doc.icon}</span> <span>${doc.name}</span></a>`;
+                });
+                documentsHTML += '</div>';
+            } else {
+                documentsHTML = '<div class="documents-section"><h3 style="color: #00ff96; margin-bottom: 15px;">📎 Documentation</h3><p class="no-documents">Aucune documentation pour le moment. Vous pouvez ajouter des liens dans le code JavaScript.</p></div>';
+            }
+            
             modalBody.innerHTML = `
                 <div class="detail-section">
                     <h3>Contexte</h3>
@@ -1074,6 +1130,7 @@
                     <h3>Résultats obtenus</h3>
                     <div class="editable-content">${mission.competences}</div>
                 </div>
+                ${documentsHTML}
             `;
             modal.style.display = 'block';
         }
